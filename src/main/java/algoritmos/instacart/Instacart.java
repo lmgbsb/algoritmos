@@ -73,7 +73,7 @@ public class Instacart {
 			}
 		}
 		System.out.println("x = " + x + ", diferenca = " + diferenca + "\n\n");
-		return(diferenca <= x? true: false);
+		return (diferenca <= x? true: false);
 	}	
 }
 
