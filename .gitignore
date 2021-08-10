@@ -1,7 +1,9 @@
+.idea/
+algoritmos.iml
+.attach_pid26403
+.attach_pid26755
+
 target/
 .classpath
 .project
 .settings/
-.idea/
-algoritmos.iml
-
