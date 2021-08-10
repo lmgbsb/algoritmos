@@ -40,29 +40,23 @@ otherwise return false.
  */
 public class IncreasingSequence {
 
-	boolean almostIncreasingSequence(int[] seq) {		
-			
-		int quantidadeElementosQuebramSequenciaCrescente = 0;
-		
-		for(int s = 0; s < seq.length; s ++) {
-			
+	
+	boolean almostIncreasingSequence(int[] seq) {
+		int quantidadeElementosQuebramSequenciaCrescente = 0;		
+		for(int s = 0; s < seq.length; s ++) {			
 			//verifica se o próximo número existe e quebra a sequencia crescente
 			try {//prevent index out of bounds exception
 				if(seq[s+1] <= seq[s]) {
 					quantidadeElementosQuebramSequenciaCrescente += 1;
 				}
-			}catch(Exception e) {System.out.println("não há mais números na sequência");}
-			
+			}catch(Exception e) {System.out.println("não há mais números na sequência");}			
 			try {
 				//se os próximos dois números forem menores ou iguais ao atual, retornar false				
 				if(seq[s+1] <= seq[s] && seq[s+2] <= seq[s] && s != 0) {
 					return false;
 				}									
-			}catch(Exception e) {System.out.println("não há mais dois números");}			
-			
-		}			
-			
+			}catch(Exception e) {System.out.println("não há mais dois números");}					
+		}						
 		return (quantidadeElementosQuebramSequenciaCrescente > 1)? false: true;
-	}
-	
+	}	
 }
